@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Springload Test
+My submission for the [Spring Form Validation Problem](https://github.com/springload/form-validation-problem/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tools used
+* CRA to get the project up and running
+* Styled components for quick and easy styling
 
-## Available Scripts
+## Input Components
+Inputs are controlled by the data object – keeping input state in sync with the data.
 
-In the project directory, you can run:
+### Email Address
+* Uses the pattern attribute to validate email address format
 
-### `npm start`
+### Password
+* Uses the pattern attribute to validate 8+ character length
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Colour
+* Radio button selector for single choice
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Animals
+* Checkbox selectors for multi choice
+* Checking/unchecking adds/removes each animal from the animals array in the data
 
-### `npm test`
+### Type of Tiger
+* Only appears if Tiger is checked above
+* Uses html required attribute for validation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Submit
+* Button copy changes during form submission to indicate progress
+* Success message appears once form is submitted
 
-### `npm run build`
+## Considerations
+* Accessibility: form can be completed with keyboard only
+* Browser support: Tested on major browsers (Chrome, Firefox, Edge, Safari)
+* Documentation: Basic comments have been left in the code indicating what each section does
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What I would continue doing...
+I focussed on getting the data and validation right in the time alloted. While the interface is functional (and as responsive, if not exciting, as a single-column layout) it could be improved with more time:
+* Focus indicator on submit button could be a bit better (for accessibility)
+* Components could be split out into individual files – to be more re-usable and make it easier to explore the code
+* With re-usable components, inputs could be mapped to dynamic data sets (e.g. if an editor chose form fields in a CMS)
+* Colours inputs could use their respective colours to make selection more intuitive. Not such an issue with 5 options but with a larger data set it could be helpful!
+* Images could be included for animals
+* Custom styling could be applied to radio/checkbox inputs, so they a. look nicer and b. are consited across browsers/devices
+* An animation or transition could be implemented for revealing the Type of Tiger field, and success message
+* Instructions and error messages could be expanded – e.g. a custom message prompting a user to enter a valid email address rather than the browser default, to ensure a consistent experience across devices
+* Automated testing could be implemented for inputs (would be more valuable the larger the form got and with re-usable components)
+* Form submission data could be piped off somewhere when a user submits the form!
