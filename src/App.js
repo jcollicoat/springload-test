@@ -196,6 +196,7 @@ function App() {
       <Form id="contact-form" name="contact-form" onSubmit={handleSubmit}>
         <Group>
           <Label htmlFor="email">Email Address:</Label>
+          <Sublabel>Required</Sublabel>
           <Input
             disabled={status !== "initial"}
             hasData={data.email !== ""}
@@ -204,6 +205,7 @@ function App() {
             onChange={handleChange}
             pattern="[A-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             required
+            title="Please enter a valid email address."
             type="email"
             value={data.email}
           ></Input>
@@ -218,7 +220,6 @@ function App() {
             minLength="9"
             name="password"
             onChange={handleChange}
-            required
             type="password"
             value={data.password}
           ></Input>
@@ -287,7 +288,7 @@ function App() {
           </OptionGroup>
         </Group>
         <Group>
-          <MultiName>Animal:</MultiName>
+          <MultiName>Animals:</MultiName>
           <OptionGroup>
             <Check
               checked={data.animals.includes("bear")}
@@ -340,6 +341,7 @@ function App() {
         {data.animals.includes("tiger") && (
           <Group>
             <Label htmlFor="email">Type of Tiger:</Label>
+            <Sublabel>Required</Sublabel>
             <Input
               disabled={status !== "initial"}
               hasData={data.tiger !== ""}
